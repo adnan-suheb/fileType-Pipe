@@ -1,0 +1,18 @@
+<section class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4" *ngFor="let files of filesData">
+            <div class="card text-center">
+                <div class="card-body">
+                    <figure class="cardContent mb-0">
+                        <img [src]="files.fileType|filetype" alt="">
+                        <figcaption>
+                            <h2 class="mb-0">{{files.fileName| titlecase}}</h2>
+                            <p class="mb-0">{{files.fileSize|fileSize}}</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
